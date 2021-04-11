@@ -9,7 +9,7 @@ class IsingModel3d(IsingModel):
     BLUE = (0, 0, 1, 0.1)
 
     def __init__(self, x_size: int, y_size: int, z_size: int,
-                 initializer: callable((int, int, int)) = lambda x, y, z: 1, sphere_radius=0.2):
+                 initializer: callable((int, int, int)) = lambda x, y, z: 1, sphere_radius: float = 0.2):
         super().__init__(x_size, y_size, z_size, initializer)
         self.sphere_radius = sphere_radius
 
@@ -50,7 +50,8 @@ class IsingModel3d(IsingModel):
         item.translate(*position)
         return item
 
-    def start(self):
+    @staticmethod
+    def start():
         if (sys.flags.interactive != 1) or not hasattr(QtCore, 'PYQT_VERSION'):
             QtGui.QApplication.instance().exec_()
 
@@ -62,6 +63,7 @@ class IsingModel3d(IsingModel):
                         IsingModel3d.RED if self.particles[i][j][k] == 0 else IsingModel3d.BLUE)
 
     def update(self):
+        # TODO: can implement main algorithm here
         # Some interesting stuff here
         self.update_points()
 
