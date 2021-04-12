@@ -5,8 +5,8 @@ import sys
 
 
 class IsingModel3d(IsingModel):
-    RED = (1, 0, 0, 0.1)
-    BLUE = (0, 0, 1, 0.1)
+    RED = (1, 0.1, 0.1, 0.1)
+    BLUE = (0.1, 0.1, 1, 0.1)
 
     def __init__(self, x_size: int, y_size: int, z_size: int,
                  initializer: callable((int, int, int)) = lambda x, y, z: 1, sphere_radius: float = 0.2):
@@ -46,7 +46,7 @@ class IsingModel3d(IsingModel):
 
     def create_sphere(self, color: tuple[float, float, float, float], position: tuple[int, int, int]) -> gl.GLMeshItem:
         sphere = gl.MeshData.sphere(4, 4, radius=self.sphere_radius)
-        item = gl.GLMeshItem(meshdata=sphere, smooth=True, color=color, shader='balloon', glOptions='additive')
+        item = gl.GLMeshItem(meshdata=sphere, smooth=False, color=color, shader='balloon', glOptions='additive')
         item.translate(*position)
         return item
 
