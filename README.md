@@ -13,7 +13,7 @@ Example of the visualization:
 
 
 # Structure
-There are 2 classes in the code: IsongModel and IsingModel3d. The latter inherits IsingModel
+There are 2 classes in the code: IsingModel and IsingModel3d. The latter inherits IsingModel and implements assitional visualization
 
 # Implementation
 The model is implemented without any libraries that can improve the performance (like NumPy) \
