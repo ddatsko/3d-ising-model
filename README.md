@@ -4,8 +4,8 @@
 To use the code you need **Python 3.9+** \
 To install the requirements just run
 ``` pip install -r requirements.txt ``` \
-To run visualization just run the IsingModel3d ```run_simulation``` method. This way no graphs are created, you can just see the visualization.
-The model is updated in runtime and you can rotate and move the camera
+To run visualization just run the IsingModel3d ```run_simulation``` method. This way no graphs are created, you can just see the visualization. \
+The model is updated in runtime and you can rotate and move the camera \
 Example of the visualization:
 ![Peek 2021-04-26 01-26](https://user-images.githubusercontent.com/35429810/116011574-72395b00-a62e-11eb-847b-26cf5034d64c.gif)
 
